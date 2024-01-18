@@ -10,11 +10,11 @@ class Solution {
         int answer = 0;
         int k = 0;
         Stack<Integer> dolls = new Stack<>();
-        while (k<moves.length) {
-            for(int i = 0; i<board[0].length; i++) {
-                int pick = board[i][moves[k]-1];
+        for(int i : moves){
+            for(int j =0; j<board.length; j++) {
+                int pick = board[j][moves[i]-1];
                 if(pick != 0) {
-                    board[i][moves[k]-1] = 0;
+                    board[j][moves[i]-1] = 0;
                     if(!dolls.empty() && dolls.peek() == pick) {
                         dolls.pop();
                         answer += 2;
@@ -22,9 +22,10 @@ class Solution {
                         dolls.push(pick);
                     }
                     break;
+                } else {
+                    continue;
                 }
             }
-            k++;
         }
         return answer;
     }
