@@ -8,8 +8,9 @@ import java.util.*;
 class Solution {
     public int solution(int[][] board, int[] moves) {
         int answer = 0;
+        int k = 0;
         Stack<Integer> dolls = new Stack<>();
-        for(int i : moves){
+        for(k++ < moves.length){
             for(int j =0; j<board.length; j++) {
                 int pick = board[j][moves[i]-1];
                 if(pick != 0) {
