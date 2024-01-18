@@ -54,7 +54,7 @@ BOJ 그룹 (https://www.acmicpc.net/group/19783)
 - 폴더 명 : `본인 영문 이름`
 - 하위 폴더 명 : `Site 약자(소문자)`
 - 파일 명 : `Site 약자(소문자)` + `문제번호java`
-- ex) `ChoiMinJu/boj/1004.java`, `ChoiMinJu/swea/1004.java`
+- ex) `ChoiMinJu/boj/1004.java`, `ChoiMinJu/swea/1004.java`, `ChoiMinJu/programmers/doll_game.java`
 
 ### 5. 커밋 규칙
 
