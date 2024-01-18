@@ -10,7 +10,7 @@ class Solution {
         int answer = 0;
         int k = 0;
         Stack<Integer> dolls = new Stack<>();
-        for(k++ < moves.length){
+        for(k < moves.length){
             for(int j =0; j<board.length; j++) {
                 int pick = board[j][moves[i]-1];
                 if(pick != 0) {
@@ -26,6 +26,7 @@ class Solution {
                     continue;
                 }
             }
+            k++;
         }
         return answer;
     }
