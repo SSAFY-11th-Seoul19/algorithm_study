@@ -53,13 +53,13 @@ BOJ 그룹 (https://www.acmicpc.net/group/19783)
 
 - 폴더 명 : `본인 영문 이름`
 - 하위 폴더 명 : `Site 약자(소문자)`
-- 파일 명 : `Site 약자(소문자)` + `문제번호`
-- ex) `ChoiMinJu/boj/boj1004.java`, `ChoiMinJu/swea/swea1004.java`
+- 파일 명 : `문제번호`
+- ex) `ChoiMinJu/boj/1004.java`, `ChoiMinJu/swea/1004.java`, `ChoiMinJu/programmers/64061.java`
 
 ### 5. 커밋 규칙
 
 - Commit subject : `[태그] 문제번호`
-- ex) `[solved] boj28354`, `[optimization] boj28354`
+- ex) `[solved] 28354`, `[optimization] 28354`
 
 | 태그             | 설명   |
 |----------------|------|
@@ -100,6 +100,8 @@ BOJ 그룹 (https://www.acmicpc.net/group/19783)
 
 - MD Title : `x월_x주_스터디_활동_주간보고서_xxx(작성자)`
   - ex) `1월_1주_스터디_활동_주간보고서_홍길동`
+- MD Commit : `[submit] yymmdd`
+  - ex) `[submit] 240118`
 - MD Content :
   - 페어별 스터디 진행 상황
     - 구성원 이름
