@@ -6,28 +6,26 @@
 import java.util.*;
 
 class Solution {
-    public int solution(int[][] board, int[] moves) {
-        int answer = 0;
-        int k = 0;
-        Stack<Integer> dolls = new Stack<>();
-        while(k < moves.length){
-            for(int j =0; j<board.length; j++) {
-                int pick = board[j][moves[i]-1];
-                if(pick != 0) {
-                    board[j][moves[i]-1] = 0;
-                    if(!dolls.empty() && dolls.peek() == pick) {
-                        dolls.pop();
-                        answer += 2;
-                    } else {
-                        dolls.push(pick);
-                    }
-                    break;
-                } else {
-                    continue;
-                }
-            }
-            k++;
-        }
-        return answer;
-    }
+	public int solution(int[][] board, int[] moves) {
+		int answer = 0;
+		Stack<Integer> dolls = new Stack<>();
+		for (int i = 0; i < moves.length; i++) {
+			for (int j = 0; j < board.length; j++) {
+				int pick = board[j][moves[i] - 1];
+				if (pick != 0) {
+					board[j][moves[i] - 1] = 0;
+					if (!dolls.empty() && dolls.peek() == pick) {
+						dolls.pop();
+						answer += 2;
+					} else {
+						dolls.push(pick);
+					}
+					break;
+				} else {
+					continue;
+				}
+			}
+		}
+		return answer;
+	}
 }
