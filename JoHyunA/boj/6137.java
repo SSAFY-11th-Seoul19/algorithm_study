@@ -22,7 +22,7 @@ public class Main {
         findString();
         for(int i=0;i<N;i++){
             bw.write(T.charAt(i));
-            if((i+1)%80 == 0){
+            if((i+1)%MAX_LENGTH == 0){
                 bw.write("\n");
             }
         }
