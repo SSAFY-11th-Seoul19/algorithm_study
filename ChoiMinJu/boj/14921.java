@@ -22,7 +22,8 @@ public class Main {
             int sum = arr[lp] + arr[rp];
             if (Math.abs(sum) <= Math.abs(min)) min = sum;
             if (sum < 0) lp++; // 합을 더 크게 만들기
-            else rp--; // 합을 더 작게 만들기
+            else if (sum > 0) rp--; // 합을 더 작게 만들기
+            else break;
         }
         System.out.println(min);
 
