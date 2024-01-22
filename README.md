@@ -79,10 +79,8 @@ BOJ 그룹 (https://www.acmicpc.net/group/19783)
 ### 6. PR 규칙
 
 - PR Title : `이름 / x월 x주차 / 요일`
-  - ex) `홍길동 / 1월 1주차 / 월`
+  - ex) `홍길동 / 1월 1주차 / 월요일`
 - PR Comment :
-  - PR TITLE : 이름 / X월 X주차 / x요일
-    - ex) 홍길동 / 1월 4주차 / 목요일 (해당 제목은 body에서 지우기)
   - 이슈 번호
   - 소요 시간
   - 풀이 과정 (실패한 풀이도 작성)
