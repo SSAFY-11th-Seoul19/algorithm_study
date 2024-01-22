@@ -18,9 +18,9 @@ public class Main {
                 ans.add(arr[lp]);
                 break;
             }
-            if ((int)arr[lp] < (int)arr[rp]) {
+            if (arr[lp] < arr[rp]) {
                 ans.add(arr[lp++]);
-            } else if ((int)arr[rp] < (int)arr[lp]) {
+            } else if (arr[rp] < arr[lp]) {
                 ans.add(arr[rp--]);
             } else {
                 int start = lp, end = rp;
@@ -28,7 +28,7 @@ public class Main {
                 while(arr[start] == arr[end]) {
                     if (end>0) end--;
                     if (start<N-1) start++;
-                    if((int)arr[start] > (int)arr[end]) {
+                    if(arr[start] > arr[end]) {
                         flag = false;
                         break;
                     }
