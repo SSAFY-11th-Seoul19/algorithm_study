@@ -39,10 +39,9 @@ public class Main {
 						stringT += stringS[end--];
 						check = true;
 						break;
-					} else {
-						left++;
-						right--;
 					}
+					left++;
+					right--;
 				}
 				if (!check) {
 					stringT += stringS[start++];

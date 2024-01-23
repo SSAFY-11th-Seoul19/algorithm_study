@@ -16,21 +16,21 @@ public class Main {
 		}
 		int start = 0;
 		int end = n - 1;
-		int min = 200000000;
+		int min = Integer.MAX_VALUE;
 		while (true) {
 			if (start == end) {
 				break;
-			} else {
-				int sum = portion[start] + portion[end];
-				if (Math.abs(sum) <= Math.abs(min)) { // min에는 절댓값이 아닌 값이 저장되어있으므로, 비교할 땐 절댓값으로 치환
-					min = sum;
-				}
-				if (sum < 0) {
-					start++;
-				} else {
-					end--;
-				}
 			}
+			int sum = portion[start] + portion[end];
+			if (Math.abs(sum) <= Math.abs(min)) { // min에는 절댓값이 아닌 값이 저장되어있으므로, 비교할 땐 절댓값으로 치환
+				min = sum;
+			}
+			if (sum < 0) {
+				start++;
+			} else {
+				end--;
+			}
+			
 		}
 		System.out.println(min);
 	}
