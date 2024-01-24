@@ -8,13 +8,13 @@
 
 ## 🏃Team Profile
 
-| ![image](https://github.com/minju412/darkweb-back/assets/59405576/6fa994f9-efb5-4963-b673-1cc74945664e) |                           ![image](https://github.com/minju412/darkweb-back/assets/59405576/9aa6b7ff-813a-416b-a374-c0cdcdedeb5c)                           |                      ![image](https://github.com/minju412/darkweb-back/assets/59405576/9aa6b7ff-813a-416b-a374-c0cdcdedeb5c)                      |                     ![image](https://github.com/minju412/darkweb-back/assets/59405576/9aa6b7ff-813a-416b-a374-c0cdcdedeb5c)                     |
+| ![image](https://avatars.githubusercontent.com/u/59405576?v=4) |                           ![image](https://avatars.githubusercontent.com/u/69022662?v=4)                           |                      ![image](https://avatars.githubusercontent.com/u/50574878?v=4)                      |                     ![image](https://avatars.githubusercontent.com/u/58273261?v=4)                     |
 |:-------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------:|:----------------------------------------------------:|:--------------------------------------------------:|
-|                          **최민주** <br> [minju412](https://github.com/minju412)                           |     **xxx** <br> [test]()      |                **xxx** <br> [test]()                 |               **xxx** <br> [test]()                |
-| ![image](https://github.com/minju412/darkweb-back/assets/59405576/9aa6b7ff-813a-416b-a374-c0cdcdedeb5c) |                           ![image](https://github.com/minju412/darkweb-back/assets/59405576/9aa6b7ff-813a-416b-a374-c0cdcdedeb5c)                           |                      ![image](https://github.com/minju412/darkweb-back/assets/59405576/9aa6b7ff-813a-416b-a374-c0cdcdedeb5c)                      |                     ![image](https://github.com/minju412/darkweb-back/assets/59405576/9aa6b7ff-813a-416b-a374-c0cdcdedeb5c)                     |
-|                            **xxx** <br> [test]()                             |     **xxx** <br> [test]()      |                **xxx** <br> [test]()                 |               **xxx** <br> [test]()                |
-| ![image](https://github.com/minju412/darkweb-back/assets/59405576/9aa6b7ff-813a-416b-a374-c0cdcdedeb5c) |                           ![image](https://github.com/minju412/darkweb-back/assets/59405576/9aa6b7ff-813a-416b-a374-c0cdcdedeb5c)                           |                      ![image](https://github.com/minju412/darkweb-back/assets/59405576/9aa6b7ff-813a-416b-a374-c0cdcdedeb5c)                      |                     ![image](https://github.com/minju412/darkweb-back/assets/59405576/9aa6b7ff-813a-416b-a374-c0cdcdedeb5c)                     |
-|                            **xxx** <br> [test]()                             |     **xxx** <br> [test]()      |                **xxx** <br> [test]()                 |               **xxx** <br> [test]()                |
+|                          **최민주** <br> [minju412](https://github.com/minju412)                           |     **조현아** <br> [HyunaJo](https://github.com/HyunaJo)      |                **백지민** <br> [whitepaper907](https://github.com/whitepaper907)                 |               **이준용** <br> [given-dragon](https://github.com/given-dragon)                |
+| ![image](https://avatars.githubusercontent.com/u/81621620?v=4) |                           ![image](https://avatars.githubusercontent.com/u/41482946?v=4)                           |                      ![image](https://avatars.githubusercontent.com/u/129257392?v=4)                      |                     ![image](https://avatars.githubusercontent.com/u/156403907?v=4)                     |
+|                            **김재후** <br> [HooKim](https://github.com/HooKim)                             |     **김현재** <br> [galug](https://github.com/galug)      |                **조재혁** <br> [Ranccat](https://github.com/Ranccat)                  |               **박상우** <br> [Ssssangwoops](https://github.com/Ssssangwoops)                |
+| ![image](https://avatars.githubusercontent.com/u/97392183?v=4) |                           ![image](https://avatars.githubusercontent.com/u/44563065?v=4)                           |                      ![image](https://avatars.githubusercontent.com/u/99160103?v=4)                      |                     ![image](https://avatars.githubusercontent.com/u/80228712?v=4)                     |
+|                            **조윤정** <br> [Huon0423](https://github.com/Huon0423)                             |     **최광민** <br> [chwangmin](https://github.com/chwangmin)      |                **이재혁** <br> [KLJH1025](https://github.com/KLJH1025)                 |               **김혁진** <br> [gurwls0122](https://github.com/gurwls0122)                |
 
 ---
 
@@ -34,11 +34,11 @@ BOJ 그룹 (https://www.acmicpc.net/group/19783)
 - 페어는 인원에 따라 3~4명
 
 ### 3. 진행 방식
-- 매 주 월(or 화) / 목(or 금) 마다 공통 문제가 출시되면, 다음 모임까지 풀어서 PR을 날린다.
-  - 월(or 화): 알고리즘 2 문제
+- 매 주 월/목 마다 공통 문제가 출시되면, 다음 모임까지 풀어서 PR을 날린다.
+  - 월: 알고리즘 2 문제
     - 문제 1. 적당한 난이도 (필수 & 최대한 혼자 구현)
     - 문제 2. 어려운 난이도 (노력 & 모르겠으면 풀이를 참고하여 구현)
-  - 목(or 금): 기출 1 문제
+  - 목: 기출 1 문제
     - 삼성, 카카오 등..
 - 모임 시간에 맞춰 페어와 함께 PR을 보며, 코드 리뷰를 진행한다.
   - 자료구조를 직접 구현하는 등 최적화를 해 볼 수도 있다.
@@ -52,14 +52,14 @@ BOJ 그룹 (https://www.acmicpc.net/group/19783)
 ### 4. 파일 생성 규칙
 
 - 폴더 명 : `본인 영문 이름`
-- 하위 폴더 명 : `Site 약자`
-- 파일 명 : `Site 약자` + `문제번호`
-- ex) `ChoiMinJu/boj/boj1004.java`, `ChoiMinJu/swea/swea1004.java`
+- 하위 폴더 명 : `Site 약자(소문자)`
+- 파일 명 : `문제번호`
+- ex) `ChoiMinJu/boj/1004.java`, `ChoiMinJu/swea/1004.java`, `ChoiMinJu/programmers/64061.java`
 
 ### 5. 커밋 규칙
 
-- Commit subject : [태그] 문제번호
-- ex) `[solved] boj28354`, `[optimization] boj28354`
+- Commit subject : `[태그] 문제번호`
+- ex) `[solved] 28354`, `[optimization] 28354`
 
 | 태그             | 설명   |
 |----------------|------|
@@ -78,12 +78,13 @@ BOJ 그룹 (https://www.acmicpc.net/group/19783)
 
 ### 6. PR 규칙
 
-- PR Title : `이름 / 주차 / 요일`
-  - ex) `홍길동 / 1월 1주차 / 월`
+- PR Title : `이름 / x월 x주차 / 요일`
+  - ex) `홍길동 / 1월 1주차 / 월요일`
 - PR Comment :
-  - 문제 해결 아이디어 (or 방법)
-  - 어려웠던 점
+  - 이슈 번호
   - 소요 시간
+  - 풀이 과정 (실패한 풀이도 작성)
+  - 실수했던 것
 
 ### 7. 코드리뷰 규칙
 
@@ -100,6 +101,8 @@ BOJ 그룹 (https://www.acmicpc.net/group/19783)
 
 - MD Title : `x월_x주_스터디_활동_주간보고서_xxx(작성자)`
   - ex) `1월_1주_스터디_활동_주간보고서_홍길동`
+- MD Commit : `[submit] yymmdd`
+  - ex) `[submit] 240118`
 - MD Content :
   - 페어별 스터디 진행 상황
     - 구성원 이름
