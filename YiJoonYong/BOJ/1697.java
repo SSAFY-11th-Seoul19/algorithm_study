@@ -3,54 +3,38 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 class Main {
-    static final int MAX = 100001;
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] s = br.readLine().split(" ");
+        int N = Integer.parseInt(s[0]);
+        int K = Integer.parseInt(s[1]);
 
-        String[] split = br.readLine().split(" ");
-        int N = Integer.parseInt(split[0]);
-        int K = Integer.parseInt(split[1]);
-
-        int[] timeArr = new int[MAX];
-        boolean[] isVisited = new boolean[MAX];
+        boolean[] isVisited = new boolean[100_001];
         isVisited[N] = true;
 
-        Queue<Integer> queue = new LinkedList<>();
-        queue.add(N);
+        Queue<int[]> queue = new LinkedList<>();
+        queue.add(new int[]{N, 0});
 
-        int minTime = 0;
         while (!queue.isEmpty()) {
-            int currPos = queue.poll();
-
-            int xs = currPos - 1;   // -1
-            int xp = currPos + 1;   // +1
-            int xm = currPos * 2;   // *2
-            int addTime = timeArr[currPos]+1;
-
-            if (currPos == K) {
-                minTime = timeArr[currPos];
-                break;
+            int[] X = queue.poll();
+            if (X[0] == K) {
+                System.out.println(X[1]);
+                return;
             }
 
-            if ((xs >= 0) && !isVisited[xs]) {
-                queue.add(xs);
-                isVisited[xs] = true;
-                timeArr[xs] = addTime;
-            }
+            int way1 = X[0]-1;
+            int way2 = X[0]+1;
+            int way3 = X[0]*2;
+            int[] way = {way1, way2, way3};
 
-            if ((xp < MAX) && !isVisited[xp]) {
-                queue.add(xp);
-                isVisited[xp] = true;
-                timeArr[xp] = addTime;
-            }
+            for (int w : way) {
+                if (w < 0 || 100_000 < w || isVisited[w]) {
+                    continue;
+                }
 
-            if ((xm < MAX) && !isVisited[xm]) {
-                queue.add(xm);
-                isVisited[xm] = true;
-                timeArr[xm] = addTime;
+                queue.add(new int[]{w, X[1]+1});
+                isVisited[w] = true;
             }
         }
-
-        System.out.println(minTime);
     }
 }
