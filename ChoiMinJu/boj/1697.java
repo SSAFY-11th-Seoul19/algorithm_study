@@ -15,17 +15,17 @@ public class Main {
         int N = Integer.parseInt(stk.nextToken());
         K = Integer.parseInt(stk.nextToken());
 
-        DFS(N, 0);
+        dfs(N, 0);
         System.out.println(min);
     }
 
-    public static void DFS(int n, int cnt) {
+    public static void dfs(int n, int cnt) {
         if (cnt > min) return;
         if (n == K && min > cnt) {
             min = cnt;
         }
-        DFS(n+1, cnt+1);
-        DFS(n-1, cnt+1);
-        DFS(n*2, cnt+1);
+        dfs(n+1, cnt+1);
+        dfs(n-1, cnt+1);
+        dfs(n*2, cnt+1);
     }
 }
