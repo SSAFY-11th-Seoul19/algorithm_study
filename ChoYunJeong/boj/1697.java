@@ -22,11 +22,11 @@ public class Main {
 	public static void bfs(int n, int k) {
 		Deque<Integer> dq = new ArrayDeque<>();
 		dq.addLast(n);
-		distance[n] = 1;
+		distance[n] = 0;
 		while (!(dq.isEmpty())) {
 			int position = dq.pollFirst();
-			if (position == k) {
-				System.out.println(distance[position] - 1);
+			if (position-1 == k || position+1 == k || position*2 == k) {
+				System.out.println(distance[position]);
 				break;
 			}
 			for (int i : move) {
