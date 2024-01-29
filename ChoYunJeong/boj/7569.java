@@ -7,7 +7,7 @@ class tomato {
 	int y;
 	int z;
 
-	tomato(int z, int y, int x) {
+	tomato(int z, int x, int y) {
 		this.x = x; // x=>행
 		this.y = y; // y=>열
 		this.z = z; // z=>높이
@@ -27,7 +27,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		;
+		
 		m = Integer.parseInt(st.nextToken()); // 2차원 배열 행의 크기
 		n = Integer.parseInt(st.nextToken()); // 2차원 배열 열의 크기
 		h = Integer.parseInt(st.nextToken()); // 2차원 배열 높이의 크기
@@ -66,9 +66,9 @@ public class Main {
 
 				if (nx >= 0 && nx < n && ny >= 0 && ny < m && nz >= 0 && nz < h) {
 					if (tomatoes[nz][nx][ny] == 0) {
-						tomatoQ.add(new tomato(nz, ny, nx));
+						tomatoQ.add(new tomato(nz, nx, ny));
 
-						tomatoes[nz][nx][ny] = tomatoes[nz][nx][ny] + 1;
+						tomatoes[nz][nx][ny] = tomatoes[z][x][y] + 1;
 					}
 				}
 			}
