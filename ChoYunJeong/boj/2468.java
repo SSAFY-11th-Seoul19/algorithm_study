@@ -27,17 +27,17 @@ public class Main {
 
 		for (int h = 0; h < maxHeight + 1; h++) {// 장마 강수량을 증가시키며 maxArea 갱신
 			visited = new boolean[n][n]; // 방문 체크 배열
-			int temp = 0; // 잠기지 않은 지역을 담을 임시 변수
+			int count = 0; // 잠기지 않은 지역을 담을 임시 변수
 
 			for (int i = 0; i < n; i++) { // 모든 지역을 들리며 검사
 				for (int j = 0; j < n; j++) {
 					// visited == false : 미방문 && place[i][j]>h : 잠기지 않음
 					if (!visited[i][j] && place[i][j] > h) {
-						temp += dfs(i, j, h); // dfs 호출
+						count += dfs(i, j, h); // dfs 호출
 					}
 				}
 			}
-			maxArea = Math.max(maxArea, temp); // 임시변수의 값과 maxArea 비교 => 갱신
+			maxArea = Math.max(maxArea, count); // 임시변수의 값과 maxArea 비교 => 갱신
 		}
 		bw.write(Integer.toString(maxArea));
         bw.flush();
