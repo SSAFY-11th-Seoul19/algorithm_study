@@ -2,13 +2,10 @@
 #include <stack>
 
 using namespace std;
-int N, M, r, c, d, a, ans, curR, curC, curD, nextR, nextC, nextD;
-bool room[50][50];
-bool visited[50][50];
+int N, M, r, c, d, ans, r2,c2,d2;
+int room[50][50];
 int dC[] = {0, 1, 0, -1};
 int dR[] = {-1, 0, 1, 0};
-stack <tuple<int,int,int>> s;
-
 int main(void){
     ios::sync_with_stdio(false);
     cin.tie(NULL);
@@ -17,37 +14,49 @@ int main(void){
     cin >> r >> c >> d;
     for(int n = 0; n < N; n++){
       for(int m = 0; m < M; m++){
-        cin >> a;
-        if(a == 1)
-          room[n][m] = true;
+        cin >> room[n][m];
       }
     }
-    s.push({r,c,d});
-    while(!s.empty()){
-      tie(curR, curC, curD) = s.top();
-      s.pop();
+
+    while(true){
+      if(room[r][c] == 0){
+        ans++;
+        room[r][c] = 2;
+      }
       
-      if(visited[curR][curC])
-        continue;
-
-      visited[curR][curC] = true;
-      ans++;
-
-      cout << curR << curC << curD << endl;
-      for(int i = 1; i <= 4; i++){
-        nextD = (curD + i) % 4;
-        nextC = curC + dC[nextD];
-        nextR = curR + dR[nextD];
+      bool isAllClean = true; 
+      for(int i = 0; i < 4; i++){
+        d2 = (d + i) % 4;
+        c2 = c + dC[d2];
+        r2 = r + dR[d2];
         
-        if(nextC < 0 || nextR < 0 || nextC >= M || nextR >= N)
+        if(c2 < 0 || r2 < 0 || c2 >= M || r2 >= N)
           continue;
-        if(room[nextR][nextC])
-          continue;
-      
-        s.push({nextC, nextR, nextD});
+        if(room[r2][c2] == 0){
+          isAllClean = false;
+          break;
+        }
       }
-    
+
+      if(isAllClean){
+        c2 = c - dC[d];
+        r2 = r - dR[d];
+        if(room[r2][c2] == 1)
+          break;
+        c = c2;
+        r = r2;
+      }
+      else{
+        d = (d+3) % 4;
+        c2 = c + dC[d];
+        r2 = r + dR[d];
+        if(room[r2][c2] == 0){
+          r = r2;
+          c = c2;
+        }
+      }
     }
+
     cout << ans << "\n";
     return 0;
 }
