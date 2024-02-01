@@ -56,10 +56,8 @@ public class Main {
         // 청소 안함 = 0 , 벽 = 1 , 청소 함 = 2;
         while(dirtyCnt>0){
             if(checkAroundClean(x, y)){ // 주변 4칸 모두 청소된 경우
-                int backDirection = (d+2)%4; // 후진 방향
-
-                int backX = x + directions[backDirection][0];
-                int backY = y + directions[backDirection][1];
+                int backX = x - directions[d][0];
+                int backY = y - directions[d][1];
                 if(room[backX][backY] == 1){ // 후진 불가능한 경우
                     return; // 작동 중지
                 }
