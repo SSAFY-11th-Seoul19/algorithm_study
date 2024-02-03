@@ -4,8 +4,30 @@ import java.io.*;
 public class Main {
     static int K;
     static int[] arr = new int[12];
-    static int[] temp = new int[12];
+    static int[] temp = new int[7];
+    static boolean[] visited = new boolean[50];
     static StringBuilder ans = new StringBuilder("");
+
+    static void search(int depth){
+        if(depth == 6){
+            for(int i = 1 ; i <= 6; i++){
+                ans.append(temp[i]).append(" ");
+            }
+            ans.append("\n");
+            return;
+        }
+
+        for(int i = 0; i < K; i++){
+            if(visited[arr[i]] || arr[i] < temp[depth]) continue;
+
+            visited[arr[i]] = true;
+            temp[depth+1] = arr[i];
+
+            search(depth+1);
+
+            visited[arr[i]] = false;
+        }
+    }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // 빠른입력
@@ -19,24 +41,10 @@ public class Main {
             for(int k = 0; k < K; k++){
                 arr[k] = Integer.parseInt(st.nextToken());
             }
-            SEARCH :
-            for(int i = 1; i < (1 << K); i++) {
-                int count = 0;
-                for (int j = 0; j < K; j++) {
-                    if ((i & (1 << j)) == 0) continue;
-                    temp[count++] = arr[j];
-                }
-                if (count != 6)
-                    continue;
 
-                for (int j = 0; j < 6; j++) {
-                    ans.append(temp[j]).append(" ");
-                }
-                ans.append("\n");
-            }
+            search(0);
             ans.append("\n");
         }
         System.out.println(ans);
-
     }
 }
