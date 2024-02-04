@@ -3,29 +3,23 @@ import java.io.*;
 
 public class Main {
     static int N;
-    static boolean[][] chess = new boolean [15][15];
+    static int[] chess = new int [15];
     static int ans;
 
     public static boolean isOk(int r, int c){
-        boolean result = false;
-        for(int i = 0 ; i < N; i++){
+        boolean result = true;
+        for(int i = 0 ; i < r; i++){
             result = false;
-            if(r+i < N && c+i < N && chess[r+i][c+i])
+            if(chess[i] == c)
                 break;
-            if(r-i >= 0 && c-i >= 0 && chess[r-i][c-i])
-                break;
-            if(r+i < N && c-i >= 0 && chess[r+i][c-i])
-                break;
-            if(r-i >= 0 && c+i < N && chess[r-i][c+i])
-                break;
-            if(chess[r][i] || chess[i][c])
+            if(Math.abs(r-i) == Math.abs(c-chess[i]))
                 break;
             result = true;
         }
         return result;
     }
     public static void queens(int row){
-        if(row == N){
+        if(row >= N){
             ans++;
             return;
         }
@@ -34,10 +28,8 @@ public class Main {
             if(!isOk(row, col))
                 continue;
 
-            chess[row][col] = true;
+            chess[row] = col;
             queens(row+1);
-            chess[row][col] = false;
-
         }
     }
 
