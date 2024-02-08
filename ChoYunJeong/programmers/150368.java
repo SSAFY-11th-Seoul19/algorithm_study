@@ -6,7 +6,7 @@ static int[] sale = {10, 20, 30, 40};
 static int maxMoney;
 static int maxUsers;
 
-class Solution {
+class Solution { 
     public int[] solution(int[][] users, int[] emoticons) {
         int[] answer = {};
         int size = users.length;
