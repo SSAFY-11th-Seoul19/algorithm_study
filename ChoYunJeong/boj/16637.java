@@ -20,10 +20,11 @@ public class Main {
 		N = Integer.parseInt(br.readLine());
 		char[] input = br.readLine().toCharArray();
 		for (int i = 0; i < N; i++) {
-			if (i % 2 == 0)
+			if (i % 2 == 0) {
 				nums.add(input[i] - '0');
-			else
-				operator.add(input[i]);
+				continue;
+			}
+			operator.add(input[i]);
 		}
 
 		dfs(0, nums.get(0)); // 0번째 index와 초기 합(계산 전이므로 처음 숫자)
