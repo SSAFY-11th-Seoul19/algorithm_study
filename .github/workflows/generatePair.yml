@@ -3,10 +3,11 @@ name: Create Random Pair
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 9 * * 5' # 매주 금요일 9시 0분에 작업 실행
+    - cron: '0 0 * * 5' # 매주 금요일 오전 9시 0분에 작업 실행
 
 env:
   MEMBERS: ${{ secrets.MEMBER }}
+  LEADERS: ${{ secrets.LEADER }}
 
 jobs:
   check-changes:
@@ -16,15 +17,16 @@ jobs:
       - name: Matching Pair
         run: |
           IFS=' ' read -r -a ALL_MEMBERS <<< "$MEMBERS"
+          IFS=' ' read -r -a ALL_LEADERS <<< "$LEADERS"
           
           BEGINNING_NAMES=()
           for member in "${ALL_MEMBERS[@]}"; do
-            if [[ ! " ${ONLINE[@]} " =~ " ${member} " ]]; then
+            if [[ ! " ${ALL_LEADERS[@]} " =~ " ${member} " ]]; then
               BEGINNING_NAMES+=("$member")
             fi
           done
           
-          echo "ONLINE TEAM Size : ${#ONLINE[@]}"
+          echo "ALL_LEADERS Size : ${#ALL_LEADERS[@]}"
           echo "BEGINNING_NAMES Size : ${#BEGINNING_NAMES[@]}"
 
           SHUFFLED_NAMES=()
@@ -101,6 +103,20 @@ jobs:
             done
           MESSAGE+="|\\n"
           MESSAGE+="\\n"
+
+          
+          MESSAGE+="|Leader|\\n"
+          
+          MESSAGE+="|"
+          for ((i=0; i<${#ALL_LEADERS[@]}; i++)); 
+          do
+            MESSAGE+="---|"
+          done
+          MESSAGE+="\\n|"
+          for ((i=0; i<${#ALL_LEADERS[@]}; i++)); 
+          do
+            MESSAGE+="${ALL_LEADERS[$i]}|"
+          done
           MESSAGE+="\""
 
           echo "JSON Data: $MESSAGE"
