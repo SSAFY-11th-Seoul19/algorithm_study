@@ -2,8 +2,8 @@ name: Create Random Pair
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * 5' # 매주 금요일 오전 9시 0분에 작업 실행
+  # schedule:
+  #   - cron: '0 0 * * 5' # 매주 금요일 오전 9시 0분에 작업 실행
 
 env:
   MEMBERS: ${{ secrets.MEMBER }}
