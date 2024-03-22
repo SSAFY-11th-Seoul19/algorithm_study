@@ -43,7 +43,7 @@ jobs:
           SHUFFLED_NAMES=($(printf "%s\n" "${SHUFFLED_NAMES[@]}" | shuf))
           echo "SHUFFLED_NAMES : ${SHUFFLED_NAMES[@]}"
           
-          DEFAULT_TEAM_SIZE=2
+          DEFAULT_TEAM_SIZE=3
           COLUMN_SIZE=$DEFAULT_TEAM_SIZE
           if [[ $((${#SHUFFLED_NAMES[@]} % $DEFAULT_TEAM_SIZE)) -ne 0 ]]; then
             ((COLUMN_SIZE++))
